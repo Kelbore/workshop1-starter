@@ -20,7 +20,12 @@ function onCalculateBtnClicked() {
     const ratePerMonth = rate/12;
     const year = Number(loanTerm.value);
     const months = year * 12;
-    const payment = loan * ratePerMonth/1-(1+ratePerMonth)**-months;
+    const x = loan * ratePerMonth;
+    const y = 1+ratePerMonth;
+    const z = y**months;
+    const f = (1+ratePerMonth)**months;
+    const h = f-1;
+    const payment = (x*z)/h;
     const total = payment * months;
 
     monthlyPayment.innerHTML = payment.toFixed(2);
