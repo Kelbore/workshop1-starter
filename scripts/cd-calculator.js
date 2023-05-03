@@ -25,7 +25,7 @@ function calculateCD() {
         let y = Math.pow(x,nt);
         let certificateOfDeposit = Number(depositAmount.value) * y;
         totalAmount.innerHTML = certificateOfDeposit.toFixed(2);
-        totalInterest.innerHTML = certificateOfDeposit-Number(depositAmount.value);
+        totalInterest.innerHTML = (certificateOfDeposit-Number(depositAmount.value)).toFixed(2);
     }
     else if(document.getElementById("termLengthMonth").checked){
         const rate = Number(annualPercentage.value)/100;
@@ -34,7 +34,7 @@ function calculateCD() {
         let w = Math.pow(s, nt);
         let certificateOfDeposit = Number(depositAmount.value) * w;
         totalAmount.innerHTML = certificateOfDeposit.toFixed(2); 
-        totalInterest.innerHTML = certificateOfDeposit-Number(depositAmount.value);
+        totalInterest.innerHTML = (certificateOfDeposit-Number(depositAmount.value)).toFixed(2);
     }
 
 }

@@ -49,11 +49,11 @@
                <div class="row mb-3"><p>Number of years(#):</p></div>
                <div class="row"><p>Payment interval:</p></div>
               </div>
-              <div class="col-6">
+              <div class="col-6" id="inputOne">
                 <div class="row">
                     <div>
                         <div class="input-group mb-3">
-                          <input type="number" id="interestRate" class="form-control" />
+                          <input type="number" id="paymentAmount" class="form-control" />
                           <div class="input-group-append">
                             <span class="input-group-text">$</span>
                           </div>
@@ -73,7 +73,7 @@
                 <div class="row">
                     <div>
                         <div class="input-group mb-3">
-                          <input type="number" id="interestRate" class="form-control" />
+                          <input type="number" id="numberOfYears" class="form-control" />
                           <div class="input-group-append">
                             <span class="input-group-text">#</span>
                           </div>
@@ -82,15 +82,14 @@
                 </div>
                 <div class="row">
                     <select name="term" id="termOfLength">
-                      <option value="year">Year</option>
-                      <option value="month">Months</option>
+                      <option value="year" id="yearInterval">Years</option>
+                      <option value="month" id="monthInterval">Months</option>
                     </select>
                 </div>
               </div>
             </div>
             <div class="row">
-                <a class="btn btn-warning mr-5" href="#" role="button">Calculate</a>
-                <a class="btn btn-warning" href="#" role="button">Reset</a>
+                <a class="btn btn-warning mr-5" href="#" id="calculateBtn" role="button">Calculate</a>
             </div>
             <hr>
             <div class="row">
@@ -98,7 +97,7 @@
                <div><p>Present Value:</p></div>
             </div>
             <div class="col-3">
-              <div class="input-group mb-3">
+              <div class="input-group mb-3" id="inputTwo">
                 <input type="number" id="presentValue" class="form-control" />
                 <div class="input-group-append">
                 <span class="input-group-text">$</span>
